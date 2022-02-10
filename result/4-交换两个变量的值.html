@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var a = 1;
+var b = 2;
+// 根据上面两个变量，运用变量的赋值或计算，得出a=2;b=1
+// 相当于左手拿苹果，右手拿桃子，需要将左手的苹果放到第三只手上，然后将右手的桃子放到左手上，再将第三只手上的苹果放到右手上，所以需要第三个变量
+var c = a; // 将a的值赋值给c变量，此时a变量中可以存放b变量的值了
+a = b; // 将b变量的值放到a变量中，此时b变量可以存放c变量的值(即原来a变量的值)
+b = c;
+console.log(a,b); // 2,1
+</script>
+</html>

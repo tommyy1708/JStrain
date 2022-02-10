@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// var k=0;  console.log(k++ + ++k +k +k++)
+var k = 0;
+// k++; // 进行运算的时候，k是0
+// ++k; // k开始为1，运算时，这时候k为2
+// k++; // k开始为2，运算时，这时候k为2
+var result = k++ + ++k +k +k++; // 所以结果是0+2+2+2=6
+//            0      2  2  2
+console.log(result);
+
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 输入一个数字，判断是否能被3整除并且能被5整除
+var num = prompt("请输入你要判断的数字：");
+// 接收到的数据是字符串类型，需要转换为数字再进行运算
+num = Number(num);
+var result = num%3 === 0 && num%5 === 0; // 两个条件需要同时成立，所以使用并且 && 运算符
+console.log(result);
+</script>
+</html>
