@@ -13,6 +13,15 @@
 var a = prompt('请输入a：'),
     b = prompt('请输入b：'),
     c = prompt('请输入c：');
-
+a = parseInt(a)
+b = parseInt(b)
+c = parseInt(c)
+if (a > b && a > c){
+   alert('the bigest one is a=' + a)
+}else if(b > a && b > c){
+    alert('the bigest one is b=' + b)
+}else if (c > a && c > b){
+    alert('the bigest one is c=' + c)
+}
 </script>
 </html>

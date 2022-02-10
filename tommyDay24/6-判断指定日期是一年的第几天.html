@@ -10,5 +10,44 @@
 <script type="text/javascript">
 // 根据一个数字日期，判断这个日期是这一年的第几天 例如： 20160211，计算后结果为42
 var date = prompt("请输入数字日期：");
+var year = parseInt(date / 10000);
+var month = parseInt((date - year*10000)/100);
+var day = date - year * 10000 - month * 100;
+var num = 0;
+
+switch(month ){
+    case 12:
+    num += 30;
+    case 11:
+		num += 31; 
+	case 10:
+		num += 30; 
+	case 9:
+		num += 31; 
+	case 8:
+		num += 31; 
+	case 7:
+		num += 30; 
+	case 6:
+		num += 31; 
+	case 5: 
+		num += 30; 
+	case 4:
+		num += 31; 
+	case 3:
+		if(year%4 == 0 && year%100 != 0 || year%400 == 0){ 
+			num += 29;
+		}else{
+			num += 28; 
+		}
+	case 2:
+		num += 31;
+	case 1:
+		num += day; 
+	break;
+	default:
+		alert("you got wrong");
+}
+alert('today is '+ num + ' days in ' + year)
 </script>
 </html>

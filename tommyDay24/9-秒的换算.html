@@ -9,6 +9,24 @@
 </body>
 <script type="text/javascript">
 // 小明学习js用了7896709887秒。问：共多少天，多少小时，多少分钟，多少秒？
-var allSeconds = 7896709887;
+var allSeconds = prompt('please input how many seconds');
+allSeconds = parseInt(allSeconds)
+var day = Math.floor(allSeconds/(3600*24))
+if(day < 0 ){
+    day == 0;
+}
+var hours = Math.floor((allSeconds - day * 24 * 3600) / 3600)
+if(hours < 0){
+    hours == 0;
+}
+var min = Math.floor((allSeconds - day * 24 * 3600- hours * 3600) / 60)
+if(min < 0){
+    min == 0;
+}
+var sec = Math.floor(allSeconds - day * 24 * 3600 - hours * 3600 - min * 60 )
+if(sec < 0){
+    sec == 0;
+}
+alert(day + ' days,' + hours + ' hours,' + min + ' minutes,' + sec + ' seconds')
 </script>
 </html>
