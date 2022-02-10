@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 输入月份，显示当月的天数   要求：利用case穿透简化代码
+var month = prompt("请输入月份：");
+// 注意要判断的类型
+month = parseInt(month);
+switch(month){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        alert("31天");
+    break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        alert("31天");
+    break;
+    case 2:
+        alert("不是28就是29");
+    break;
+    default:
+        alert("输入错误！");
+    break;
+}
+</script>
+</html>
