@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 有个皮球，每次落地弹起都是高度的一半，如果从10米高的地方丢下，第十次弹起时，皮球总过经历了多少距离。
+// 分析
+/*
+第一次弹起  h=10    距离1=h+h/2
+第二次弹起  h=h/2   距离2=h+h/2
+第三次弹起  h=h/2   距离3=h+h/2
+...
+第十次弹起时，计算所有距离的和
+*/
+var h=10; // 初始高度
+var sum = 0; // 定义初始值
+for(var i=1;i<=10;i++){ // 总共循环10次
+    s = h + h/2; // 每次的距离
+    h = h/2; // 下一次的初始高度
+    sum += s; // 将所有距离加起来
+}
+console.log(sum);
+</script>
+</html>

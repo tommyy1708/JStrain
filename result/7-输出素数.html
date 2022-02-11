@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 输出100-200之间所有的素数  (素数，就是除了1和自己本身，不能被别的数整除)
+
+for(var i=100;i<=200;i++){
+    var flag = true;
+    // 这里能得出所有数，要试一下小于自己的数能不能整除，继续循环
+    // 这个小循环中不能得到是素数的结果，所以需要使用开关的思路去判断
+    for(var j=i-1;j>1;j--){
+        if(i%j==0){
+            flag = false;
+            break;
+        }
+    }
+    if(flag){
+        document.write(i + "<br>");
+    }
+}
+</script>
+</html>
