@@ -9,5 +9,11 @@
 </body>
 <script type="text/javascript">
 // 某人在银行有50000元存款。银行每月都要收取服务费，存款大于5000元时每个月收取总额的5%，总额不大于5000元的时候不收服务费；假设这个人存了以后从来都不用，用循环计算银行要扣这个人的手续费能扣多少次？每次扣取后剩余多少钱？
+var cost = 0;
+for ( var money = 5000; money >= 5000; ){
+    money = money - money * 0.05;
+    alert(money)
+    cost++;
+}
 </script>
 </html>
