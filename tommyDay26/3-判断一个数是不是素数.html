@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    // 判断一个数是否是素数
+    function primeNum(num) {
+        var result ;
+      for (var i = 2; i <= num - 1; i++) {
+        if (num%i == 0) {
+            result = num + " is not prime number";
+          return result;
+        } 
+      }
+      result = num + " is a prime number";
+      return result
+    }
 
-</body>
-<script type="text/javascript">
-// 判断一个数是否是素数
-</script>
+    console.log(primeNum(7));
+  </script>
 </html>

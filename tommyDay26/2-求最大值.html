@@ -14,9 +14,6 @@
 // var res = a>b ? a>c?a:c : b>c?b:c ;
 // console.log(res);
 
-
-
-
 function max(a,b,c){
     // var a=3,b=4,c=5;
     var res = a>b ? a>c?a:c : b>c?b:c ;
@@ -29,6 +26,21 @@ console.log(m);
 var n = max(3,4,5)
 console.log(n);
 
+function biggest(a,b,c) {
+    var result ;
+    if(a>b && a>c){
+        result = "the beggest is "+ a;
+        return result;
+    }else if (b>a && b>c){
+        result = "the beggest is "+ b;
+        return result;
+    }else if(c>a && c>b){
+        result = "the beggest is "+ c;
+        return result;
+    }
+    return result;
+  }
+console.log(biggest(22,55,66)) 
 // 不确定的东西，先假设
 // 假设好了以后，写核心代码
 // 多假设几次 - 重复
