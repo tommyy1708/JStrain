@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 求1~n(n>=1)之间的所有偶数的个数
+// 步骤：先把核心程序写出来，然后将核心程序包在一个function中，那个数字需要每次调用变化，就作为变量并作为函数的形参，那个数字是最后需要的结果就作为返回值
+// 核心程序
+/*
+var k = 0;
+for(var i=1;i<=10;i++){
+    if(i%2==0){
+        k++;
+    }
+}
+console.log(k);
+*/
+// 包在一个函数中并指定形参和返回值
+function ou(n){
+
+    var k = 0;
+    for(var i=1;i<=n;i++){
+        if(i%2==0){
+            k++;
+        }
+    }
+    return k;
+
+}
+var res = ou(90);
+console.log(k);
+</script>
+</html>

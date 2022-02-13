@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 标准体重：男士体重=身高-100±3      女士体重=身高-110±3。写个函数，输入身高、体重、性别，输出偏重、正常。
+function weight(){
+    var sex = prompt("请输入性别(男/女)：");
+    var height = parseFloat(prompt("请输入身高(厘米)："));
+    var weight = parseFloat(prompt("请输入体重："));
+    var biaozhun;
+    if(sex == "男"){
+        biaozhun = height-100;
+    }else if(sex == "女"){
+        biaozhun = height-110;
+    }else{
+        alert("输入错误！");
+    }
+    var res = biaozhun-weight;
+    console.log(res);
+    if(res<=3 && res>=-3){
+        alert("正常");
+    }else if(res>3){
+        alert("偏瘦");
+    }else{
+        alert("偏重");
+    }
+}
+weight();
+</script>
+</html>

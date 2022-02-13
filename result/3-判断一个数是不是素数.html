@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 判断一个数是否是素数
+function su(n) {
+    for (var i = 2; i < n; i++) {
+		if (n % i == 0) {
+			return false; // 如果不是素数就直接返回false
+		}
+    }
+    // 如果循环完整的执行完了，没有经过终止，说明这是一个素数，返回true
+    return true;
+}
+var num = 5;
+if(su(num)){
+    console.log("是素数");
+}else{
+    console.log("不是素数");
+}
+</script>
+</html>

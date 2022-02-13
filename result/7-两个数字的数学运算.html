@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 编写一个函数，计算两个数字的和、差、积、商    要求：使用传参的形式
+function he(num1,num2,fuhao){
+    var result;
+    switch(fuhao){
+        case "+":
+            result = num1 + num2;
+        break;
+        case "-":
+            result = num1 - num2;
+        break;
+        case "*":
+            result = num1 * num2;
+        break;
+        case "/":
+            result = num1 / num2;
+        break;
+        default:
+            alert("参数是非法的！");
+        break;
+    }
+    return result;
+}
+var a = parseInt(prompt("输入第一个数字："));
+var b = parseInt(prompt("输入第二个数字："));
+var res = he(a,b,"-");
+console.log(res);
+</script>
+</html>
