@@ -9,5 +9,12 @@
 </body>
 <script type="text/javascript">
 // 篮球从5米高的地方掉下来，每次弹起的高度是原来的30%，经过几次弹起，篮球的高度小于0.1米。
+var high = 5;
+var count = 0;
+while(high >= 0.1){
+    high *= 0.3;
+    count++;
+}
+alert(count)
 </script>
 </html>

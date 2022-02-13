@@ -9,5 +9,13 @@
 </body>
 <script type="text/javascript">
 // 有个皮球，每次落地弹起都是高度的一半，如果从10米高的地方丢下，第十次弹起时，皮球总过经历了多少距离。
+var high = 10;
+var sum = 0;
+for(var i = 1; i <= 10; i++){
+    var each = high + high/2
+    high = high / 2;
+    sum += each
+}
+alert(sum)
 </script>
 </html>

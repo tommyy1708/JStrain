@@ -9,5 +9,17 @@
 </body>
 <script type="text/javascript">
 // 输出100-200之间所有的素数  (素数，就是除了1和自己本身，不能被别的数整除)
+for( var i = 100; i <= 200; i++){
+    var flag = true;
+    for(var j = i - 1; j > 1; j--){
+        if(i%j == 0){
+            flag = false;
+            break;
+        }
+    }
+    if(flag){
+        document.write(i + "<br>")
+    }
+}
 </script>
 </html>

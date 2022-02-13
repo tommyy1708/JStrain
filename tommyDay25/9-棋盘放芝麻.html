@@ -9,5 +9,11 @@
 </body>
 <script type="text/javascript">
 // 有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，棋盘上放的所有芝麻的重量
+var zima = 0.00001;
+var boxes = 1;
+for(var i = 1; i <= 64 ; i++){
+    boxes *= 2;
+}
+alert(boxes * zima)
 </script>
 </html>
