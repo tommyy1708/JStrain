@@ -9,5 +9,21 @@
 </body>
 <script type="text/javascript">
 // 输入一个年份，判断是否是闰年（能被4整除却不能被100整除的年份。世纪年份能被400整除的是闰年）
+function runYear() {
+    var inpt =  Number(prompt('输入年份'))
+    var result;
+    if(isNaN(inpt)){
+        alert('you got wrong, try agagin')
+       
+    }
+    if(inpt%4 == 0 && inpt%100 != 0 || inpt%400 == 0){
+        result = inpt + ' 是闰年';
+    }else{
+        result = inpt + ' 不是闰年';
+    }
+    return alert(result) ;
+  }
+
+  runYear()
 </script>
 </html>
