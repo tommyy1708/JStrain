@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Document</title>
-</head>
-<body>
-
-</body>
-<script type="text/javascript">
-// 标准体重：男士体重=身高-100±3      女士体重=身高-110±3。写个函数，输入身高、体重、性别，输出偏重、正常。
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    // 标准体重：男士体重=身高-100±3      女士体重=身高-110±3。写个函数，输入身高、体重、性别，输出偏重、正常。
+    function bodyCare() {
+      var sex = parseInt(
+        prompt('please choose your gender, man "1" and femal "2" ')
+      );
+      var height = parseFloat(prompt("please input your height"));
+      var weight = parseFloat(prompt("please input your weight"));
+      var standard;
+      if (sex == 1) {
+        standard = height - weight - 100;
+        if (standard < -3) {
+          alert("you are thin !");
+        } else if (standard > 3) {
+          alert("you are fat !");
+        } else {
+          alert("you are standard!");
+        }
+      } else if (sex == 2) {
+        standard = height - weight - 110;
+        if (standard < -3) {
+          alert("you are thin !");
+        } else if (standard > 3) {
+          alert("you are fat !");
+        } else {
+          alert("you are standard!");
+        }
+      } else {
+        alert("please try again");
+      }
+    }
+    bodyCare();
+  </script>
 </html>
