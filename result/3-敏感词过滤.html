@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 敏感词过滤
+var str = "无论多大麻烦，黑夜总会过去"; // 敏感词：夜总会  大麻
+var arr = ["夜总会","大麻"];
+for(var i=0;i<arr.length;i++){ // 遍历敏感词数组
+    var replacement = '';
+    for(var j=0;j<arr[i].length;j++){ // 遍历每个敏感词的字符
+        replacement += '*'; // 拼接成字符个数个 *
+    }
+    str = str.replace(arr[i],replacement); // 使用拼接后 * 替换敏感词
+}
+console.log(str);
+</script>
+</html>

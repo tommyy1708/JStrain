@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 统计字符串中每个字符的个数？
+var testStr = 'aoifhoiwehfoiweiwadakl';
+var i;
+var tempObj = {};
+for (i = 0; i < testStr.length; i++) { // 遍历字符串
+    var charAt = testStr.charAt(i);//相当于挨个遍历字符串字符，将字符作为key,出现的次数作为value
+    if (tempObj[charAt]) {
+        tempObj[charAt]++; // 如果对象有这个键，就将他的值 自增，每出现一次次数就会+1
+    } else {
+        tempObj[charAt] = 1; // 将每个字符作为对象的键，值为1，将1作为出现的次数
+    }
+}
+console.log(tempObj); // 对象中的键就是不重复的字符，每个字符对象的值就是出现的次数
+</script>
+</html>

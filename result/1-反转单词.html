@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 反转单词
+var str = 'I Love You';
+var arr = str.split(' '); // 将字符串使用空格炸开成3个单词组成数组
+var str1 = '';
+var f = '';
+for(var i=arr.length-1;i>=0;i--){ // 倒叙遍历数组
+    str1 += f + arr[i]; // 将数组中的每个元素拼接在一起 - 第一次f是""，以后f是空格
+    f = ' ';
+}
+console.log(str1);
+</script>
+</html>
