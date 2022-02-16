@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 高度100米，每次落下弹起时，是原来高度的一半，第7次弹起时高度多少
+/*
+分析：
+高度	表达式		弹起次数		弹起高度	表达式				
+100		h=100		1				50			h = h/2
+50		h=50		2				25			h = h/2
+25		h=25		3				12.5		h = h/2
+...
+*/
+function gao(h,k,k1){
+	h = h/2;
+	k1++;
+	if(k1==k){
+		return h;
+	}
+	return gao(h,k,k1);
+}
+console.log(gao(100,7,0));
+</script>
+</html>

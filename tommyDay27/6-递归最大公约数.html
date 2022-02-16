@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 利用递归求两个数字的最大公约数
+function fn(a,b) {
+    var max = a;
+    var min = b;
+    if(a<b){
+        max = b;
+        min = a;
+
+    }
+    var yu = max%min;
+    max = min;
+    min = yu ;
+    if(yu === 0 ){
+        return max ;
+
+    }else{
+        return fn(max,min);
+    }
+  }
+  var inputA = parseInt(prompt('input first number'))
+  var inputB = parseInt(prompt('input second number'))
+  alert(fn(inputA,inputB))
+</script>
+</html>

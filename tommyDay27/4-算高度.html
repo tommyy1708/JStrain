@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 高度100米，每次落下弹起时，是原来高度的一半，第7次弹起时高度多少
+function fn(h,t,h2) {
+    h = h/2
+    h2++
+    if(h2 == t){
+        return h;
+    }
+    return fn(h,t,h2)
+  }
+  console.log(fn(100,7,0))
+
+
+</script>
+</html>
