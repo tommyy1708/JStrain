@@ -9,5 +9,18 @@
 </body>
 <script type="text/javascript">
 // 编写函数has(arr , 60) 判断数组中是否存在60这个元素，返回布尔类型
+
+function has(arr, num) {
+    var result = false;
+    for(var i = 0; i<arr.length; i++){
+        if(arr[i] === num ){
+            result = true
+        }
+    }
+    return result
+  }
+var arrB = [1,2,3,4,5]
+var number = parseInt(prompt('which number do you want to check'))
+alert(has(arrB, number))
 </script>
 </html>

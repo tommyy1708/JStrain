@@ -9,5 +9,21 @@
 </body>
 <script type="text/javascript">
 // 设计一个程序，使用一个数组接收用户输入的7门课程的成绩，然后在页面上显示其总成绩和平均分，并列出小于60的成绩。
+var grades = [];
+var sum = 0;
+var avg = 0;
+var lessixt = [];
+
+for (var i = 0; i < 7; i++){
+     grades[i] = parseInt( prompt('please input number ' + (i+1) +  ' grades'));
+     sum +=  grades[i]
+     if(grades[i] < 60){
+         lessixt.push(grades[i])
+     }
+     avg = sum/grades.length
+     avg.toFixed(2)
+     
+    }
+console.log('The grades total is '+ sum + ', the average is ' + avg + ', less then 60 are '+ lessixt )
 </script>
 </html>
