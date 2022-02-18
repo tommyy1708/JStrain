@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 现在距离国庆还有多少天
+var now = new Date(); // 获取当前时间的事件对象
+var qing = new Date("2019-10-1"); // 获取国庆的事件对象
+var difference = qing.getTime() - now.getTime(); // 求出时间戳的查
+var days = Math.ceil(difference/1000/3600/24); // 根据毫秒数得到天数
+console.log(days);
+</script>
+</html>

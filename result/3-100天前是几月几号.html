@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+// 100天前是几月几号
+var now = +new Date(); // 毫秒数
+var PrevMilliSeconds = now - 100*24*60*60*1000;
+var PrevDate = new Date(PrevMilliSeconds); // 定义时间对象并传入100天前的毫秒数时间戳
+var month = PrevDate.getMonth() + 1;
+var date = PrevDate.getDate();
+console.log("100天前是"+month+"月"+date+"号");
+</script>
+</html>

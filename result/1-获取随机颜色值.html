@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="text" id="text">
+</body>
+<script>
+    // 编写一个函数，获得一个十六进制的随机颜色的字符串(例如：#20CD4F)
+    function getRGB(){
+        var arr = [];
+        for(var i=0;i<3;i++){
+            arr.push(Math.floor(Math.random()*255)); // 得到一个0~255的随机数
+        }
+        var str = '#';
+        for(var i in arr){
+            str += arr[i].toString(16); // 将每个随机数遍历并转为16进制
+        }
+        return str;
+    }
+    console.log(getRGB());
+    text.style.background = getRGB();
+</script>
+</html>
