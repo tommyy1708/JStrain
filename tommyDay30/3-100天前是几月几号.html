@@ -5,9 +5,16 @@
 <title>Document</title>
 </head>
 <body>
-
+<p class="text"></p>
 </body>
 <script type="text/javascript">
+    var text = document.querySelector('.text')
 // 100天前是几月几号
+var now = +new Date();
+var PrevMilliSeconds = now - 100*24*60*60*1000;
+var PrevDate = new Date(PrevMilliSeconds);
+var month = PrevDate.getMonth() + 1;
+var date = PrevDate.getDate();
+text.innerHTML = "100天前是"+month+"月"+date+"号";
 </script>
 </html>
