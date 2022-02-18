@@ -11,5 +11,14 @@
 // 敏感词过滤
 var str = "无论多大麻烦，黑夜总会过去"; // 敏感词：夜总会  大麻
 var arr = ["夜总会","大麻"];
+var newStr = '';
+for(var i = 0; i < arr.length ; i++){
+    starts = ''
+    for(var j = 0; j < arr[i].length; j++){
+        starts += '*';
+    }
+    str = str.replace(arr[i],starts)
+}
+console.log(str);
 </script>
 </html>

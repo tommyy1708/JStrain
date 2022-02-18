@@ -9,6 +9,21 @@
 </body>
 <script type="text/javascript">
 // aabccd统计每个字符出现的次数，结果显示 a 2、b 1、c 2、d1，去掉重复的字符，使结果显示 abcd
-var str = "aabbcc";
+var str = "asjhfsjffbdfaaaqhbwbwvrq";
+var obj = {};
+for(var i = 0 ; i < str.length; i++){
+    if(obj[str[i]]){
+        obj[str[i]]++
+    }else{
+        obj[str[i]] =1
+    }
+}
+console.log(obj);
+
+var noRepeat = '';
+for(var i in obj){
+    noRepeat += i
+}
+console.log('去掉重复的字符串为:'+ noRepeat);
 </script>
 </html>

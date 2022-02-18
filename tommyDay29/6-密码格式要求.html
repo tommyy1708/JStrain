@@ -16,5 +16,23 @@ A-Z 的是 065－090
 a－z 的是 097－122
 */
 
+function verify(ps) {
+    var obj = {}
+    for(var i = 0; i < ps.length;i++){
+        if(ps[i].charCodeAt()>=48 && ps[i].charCodeAt()<=57){
+            obj.num = true;
+        }else if (ps[i].charCodeAt()>=65 && ps[i].charCodeAt<=90){
+            obj.bigWord = true;
+        }else if(ps[i].charCodeAt()>=97 && ps[i].charCodeAt()<=122){
+            obj.smallWord = true;
+        }else {
+            return false;
+        }
+    }
+    if(ps.length < 6 || ps.length > 16){
+        return false
+    }
+  }
+console.log(verify('Aa1222234'));
 </script>
 </html>
