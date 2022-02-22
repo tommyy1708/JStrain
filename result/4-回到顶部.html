@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+	<p style="width:20px;">
+		锄禾日当午，汗滴禾下土。谁知盘中餐，粒粒皆辛苦。
+		床前明月光，疑是地上霜。举头望明月，低头思故乡。
+		<button id="btn">回到顶部</button>
+		离离原上草，一岁一枯荣。野火烧不尽，春风吹又生。
+	</p>
+</body>
+<script type="text/javascript">
+// 回到顶部
+btn.onclick = function(){
+	var speed = document.body.scrollTop || document.documentElement.scrollTop;
+	setInterval(function(){
+		speed -= 20;
+		document.body.scrollTop = speed;
+		document.documentElement.scrollTop = speed;
+	},50);
+	
+}
+</script>
+</html>

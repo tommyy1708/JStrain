@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script type="text/javascript">
+// 表格删除操作
+var arr = [
+    {
+    name: 'Jack',
+    age: 18,
+    gender: '男'
+    },{
+    name: 'Rose',
+    age: 20,
+    gender: '女'
+    },{
+    name: 'Tom',
+    age: 22,
+    gender: '男'
+    }
+]
+var tbody = document.querySelector("tbody");
+function loadHtml(){
+    var str = '';
+    for(var i in arr){
+        str += "<tr>";
+        str += "<td>"+(i+1)+"</td>";
+        for(var j in arr[i]){
+            str += "<td>"+arr[i][j]+"</td>";
+        }
+        str += "<td class='del' index='"+i+"'>删除</td>";
+        str += "</tr>";
+    }
+    tbody.innerHTML = str;
+    bindEvent()
+}
+loadHtml()
+function bindEvent(){
+    var OTdDels = document.querySelectorAll(".del");
+    for(var i=0;i<OTdDels.length;i++){
+        OTdDels[i].onclick = function(){
+            arr.splice(this.getAttribute("index"),1);
+            loadHtml()
+        }
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#topBox{
+			background:#f00;
+			position:fixed;
+			top:-100px;
+			left:0;
+			width:100%;
+			font-size:50px;
+			font-weight:bold;
+			text-align: center;
+			line-height:100px;
+		}
+		#back{
+			width:100px;
+			height:100px;
+			background-color: #abcdef;
+			position:fixed;
+			right:20px;
+			bottom:50px;
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="topBox">
+		顶部通栏广告
+	</div>
+	<p style="width:20px;">
+		锄禾日当午,汗滴禾下土。谁知盘中餐,粒粒皆辛苦。
+		床前明月光,疑是地上霜。举头望明月,低头思故乡。
+		<button id="btn">回到顶部</button>
+		离离原上草,一岁一枯荣。野火烧不尽,春风吹又生。
+	</p>
+	<div id="back">
+		
+	</div>
+</body>
+<script type="text/javascript">
+var timerId;
+	window.onscroll = function(){
+		var top = document.body.scrollTop || document.documentElement.scrollTop;
+		if(top >= 300){
+			topBox.style.height = '100px';
+			topBox.style.top = '0';
+		}else{
+			topBox.style.height = '0';
+			topBox.style.top = '-100px';
+		}
+		if(top >= 350){
+			back.style.display = 'block';
+		}else{
+			back.style.display = 'none';
+		}
+		if(top == 0){
+			clearInterval(timerId);
+		}
+	}
+	back.onclick = function(){
+		var speed = document.body.scrollTop || document.documentElement.scrollTop;
+		timerId = setInterval(function(){
+			speed -= 20;
+			document.body.scrollTop = speed;
+			document.documentElement.scrollTop = speed;
+		},50);
+	}
+</script>
+</html>

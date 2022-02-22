@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+</head>
+<body>
+	<p>距离国庆倒计时</p> 
+	<div><span>00</span>天
+	<span>00</span>时
+	<span>00</span>分
+	<span>00</span>秒</div>
+</body>
+<script type="text/javascript">
+function diffTime(){
+	var guo = +new Date("2022-10-1");
+	var now = +new Date();
+	var different = guo - now;
+	var diffSec = parseInt(different/1000);
+	var resSec = diffSec%60;
+	var diffMin = parseInt(diffSec/60);
+	var resMin = diffMin%60;
+	var diffHour = parseInt(diffMin/60);
+	var resHour = diffHour%24;
+	var days = parseInt(diffHour/24)
+	var oSpan = document.getElementsByTagName("span");
+	var timeArr = [days,resHour,resMin,resSec];
+	for(var i=0;i<oSpan.length;i++){
+		oSpan[i].innerText = timeArr[i];
+	}
+}
+setInterval(diffTime,1000);
+</script>
+</html>
