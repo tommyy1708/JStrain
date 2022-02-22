@@ -5,10 +5,23 @@
 <title>Document</title>
 </head>
 <body>
-
+<input type="text" name="" id="text">
 </body>
 <script type="text/javascript">
 // 判断当前是否还能限时抢购，开始时间："2019-8-1"，结束时间："2019-9-1"
-console.log(qiang());
+function qiang(){
+    var saleBegin = prompt('sale begin time (format: 20xx-xx-xx)')
+    var saleEnd = prompt('sale end time (format: 20xx-xx-xx)')
+    var start = new Date(saleBegin).getTime();
+    var end = new Date(saleEnd).getTime();
+    var now = new Date().getTime();
+    if(now >= start && now <= end){
+        return true;
+    }
+    return false;
+}
+var text = document.querySelector('#text')
+text.value = "抢购中？"+  qiang()
+
 </script>
 </html>

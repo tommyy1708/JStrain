@@ -5,9 +5,16 @@
 <title>Document</title>
 </head>
 <body>
-
+    <p class="text"></p>
 </body>
 <script type="text/javascript">
 // 现在距离国庆还有多少天
+var text = document.querySelector('.text')
+var now = new Date(); 
+var guoqing = new Date("2022-10-1");
+var difference = guoqing.getTime() - now.getTime(); 
+var days = Math.ceil(difference/1000/3600/24); 
+
+text.innerHTML = '距离国庆还有'+ days+ '天' ;
 </script>
 </html>

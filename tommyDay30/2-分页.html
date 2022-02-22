@@ -5,9 +5,22 @@
 <title>Document</title>
 </head>
 <body>
-
 </body>
 <script type="text/javascript">
 // 已知内容条数，和每页展示的条数，编程输出所有页码
+var totle = parseInt(prompt('Input total count'))
+var onePage = parseInt(prompt('Input how many iterms dispaly in per pages.'))
+function fn(totalCount,perPageCount) { 
+    var pages = Math.ceil(totalCount / perPageCount)
+    document.write('<ul>')
+        for(var i = 0;i < pages; i++){
+            document.write('<li>'+i+'</li>')
+        }
+        document.write('</ul>')
+         
+ }
+
+ console.log(fn(totle,onePage))
+ 
 </script>
 </html>
