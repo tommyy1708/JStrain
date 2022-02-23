@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style type="text/css">
+		#poems{
+			color:pink;
+		}
+	</style>
+	<select id="color">
+		<option value="0">请选择颜色</option>
+		<option value="1">红色</option>
+		<option value="2">绿色</option>
+		<option value="3">蓝色</option>
+	</select>
+	<div id="poems">
+		<h4>我爱学习</h4>
+		<p>山工念旧偏知我，</p>
+		<p>二南风化承遗爱。</p>
+		<p>忽领簿书游太学，</p>
+		<p>前身后身付余习。</p>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById("color").onchange=function(){
+		var color = document.getElementById("color").value;
+		var c
+		switch(color){
+			case "1":
+				c = 'red';
+			break;
+			case "2":
+				c = 'green';
+			break;
+			case "3":
+				c = 'blue';
+			break;
+		}
+		document.getElementById("poems").style.color = c;
+	}
+</script>
+</html>

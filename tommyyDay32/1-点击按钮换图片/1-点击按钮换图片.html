@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+	#box{
+		width:500px;
+		height:300px;
+		border:1px solid #000;
+		background:url(images/1.jpg) 0 0/500px 300px;
+	}
+</style>
+</head>
+<body>
+	<button id="btn">按钮</button>
+	<div id="box"></div>
+</body>
+<script type="text/javascript">
+// 准备几个图片，实现点击按钮随机将一个盒子的背景随机切换到几个图片中的一个
+btn.onclick = function () {  
+	//把照片放进数组
+	var imgArr = ['1.jpg','2.jpg','3.jpg']
+	//num生成数组长度的数字
+	var num = Math.floor(Math.random()*imgArr.length)
+	//img代表数组的值，不同照片地址
+	var img = imgArr[num]
+	box.style.background = 'url(images/'+ img+')100% 100%'
+}
+
+</script>
+</html>

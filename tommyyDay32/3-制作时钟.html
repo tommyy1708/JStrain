@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      span {
+        display: inline-block;
+        width: 123px;
+        height: 173px;
+        background: url(clock_image/colon.JPG);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="clock_image/0.JPG" />
+    <img src="clock_image/0.JPG" />
+    <span></span>
+    <img src="clock_image/0.JPG" />
+    <img src="clock_image/0.JPG" />
+    <span></span>
+    <img src="clock_image/0.JPG" />
+    <img src="clock_image/0.JPG" />
+  </body>
+  <script type="text/javascript">
+	  //获取当前时间的小时，分钟，秒。 
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    var display = zero(h) + "" + zero(m) + "" + zero(s);
+    var imgs = document.querySelectorAll("img");
+	//如果当前时间等于小于10的数字，拼接为前面有0的字符串
+    function zero(t) {
+      if (t < 10) {
+        t = "0" + t;
+      }
+      return t;
+    }
+	//当windows页面加载完成时，每秒遍历一次当前时间
+    window.addEventListener("load",setInterval(() => {
+        for (var i = 0; i < imgs.length; i++) {
+          imgs[i].src = "clock_image/" + display[i] + ".jpg";
+        }
+      }, 1000)
+    );
+  </script>
+</html>
