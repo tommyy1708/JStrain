@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<style>
+input,ul{
+    width: 200px;
+}
+ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    background-color: #ccc;
+    padding-left:2px;
+    display:none;
+}
+input{
+    border:0;
+    border:1px solid #000;
+    outline:none;
+}
+</style>
+<input type="text" class="text">
+<ul>
+    <li>Vue</li>
+    <li>React</li>
+    <li>Node</li>
+</ul>
+</body>
+<script type="text/javascript">
+var text = document.querySelector(".text");
+var ul = document.querySelector("ul");
+text.onfocus=function(){
+    ul.style.display = 'block';
+}
+var lis = document.querySelectorAll("li");
+for(var i=0;i<lis.length;i++){
+    lis[i].onclick=function(){
+        text.value = this.innerText;
+    }
+}
+text.onblur=function(){
+    setTimeout(function(){
+        ul.style.display = 'none';
+    },100);
+    
+}
+</script>
+</html>

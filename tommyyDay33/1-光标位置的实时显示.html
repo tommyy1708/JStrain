@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<div>x坐标：<span class="x">0</span></div>
+<div>y坐标：<span class="y">0</span></div>
+</body>
+<script type="text/javascript">
+// 应该用什么事件？这个事件应该由谁来触发？
+document.onmousemove=function(e){ // window触发也行
+    var ev = window.event || e;
+    var x = ev.clientX;
+    var y = ev.clientY;
+    // console.log(x,y);
+    document.querySelector(".x").innerText = x;
+    document.querySelector(".y").innerText = y;
+}
+</script>
+</html>

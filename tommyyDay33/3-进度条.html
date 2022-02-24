@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<style>
+.container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  margin:30px auto;
+}
+.box{
+  width: 300px;
+  height: 20px;
+  background-color: #bbb;
+  margin-right:5px;
+}
+.small{
+  width: 0;
+  height: 20px;
+  background-color: pink;
+}
+
+</style>
+<div class="container">
+<div class="box">
+  <p class="small"></p>
+</div>
+<span>0</span>
+</div>
+
+</body>
+<script type="text/javascript">
+var box = document.querySelector(".box");
+var small = document.querySelector(".small");
+var span = document.querySelector("span");
+box.onmousedown=function(ev){
+  var ev = ev || window.event;
+  var w = ev.clientX - box.offsetLeft;
+  small.style.width = w + 'px';
+  var percent = parseInt(w/box.clientWidth*100);
+  span.innerText = percent;
+  box.onmousemove=function(e){
+    var e = e || window.event;
+    var x = e.clientX;
+    var w = x - box.offsetLeft;
+    if(w >= box.clientWidth){
+      w = box.clientWidth;
+    }else if(w <= 0){
+      w = 0;
+    }
+    small.style.width = w + 'px'; 
+    var percent = parseInt(w/box.clientWidth*100);
+    console.log(w,box.clientWidth);
+    span.innerText = percent;
+  }
+}
+document.onmouseup=function(){
+  box.onmousemove=null;
+}
+</script>
+</html>

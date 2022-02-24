@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<style>
+.box{
+  width: 20px;
+}
+</style>
+<div class="box">
+  白日依山尽，
+  黄河入海流。
+  欲穷千里目，
+  更上一层楼。
+  离离原上草，
+  一岁一枯荣。
+  野火烧不尽，
+  春风吹又生。
+  锄禾日当午，
+  汗滴禾下土。
+  谁知盘中餐，
+  粒粒皆辛苦。
+  昨日入城市，
+  归来泪满巾。
+  遍身罗绮者，
+  不是养蚕人。
+</div>
+</body>
+<script type="text/javascript">
+var timer;
+var speed = 5;
+document.onkeydown=function(e){
+  clearInterval(timer); // 因为当键盘按下的时候，事件中的代码在不停的执行，所以会有很多的定时器产生，避免混乱，在开始新的定时器之前，应该将之前的定时器清除
+  var e = e || window.event;
+  var code = e.keyCode || e.which;
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if(code == 40){ // 下箭头
+    timer = setInterval(function(){
+      scrollTop += speed;
+      document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
+      console.log(1);
+    },20);
+  }else if(code == 38){ // 上箭头
+    timer = setInterval(function(){
+      scrollTop -= speed;
+      document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
+    },20);
+  }else if(code == 32){ // 空格
+    e.preventDefault();
+    e.returnValue = false;
+  }
+}
+document.onkeyup=function(){
+  clearInterval(timer);
+}
+</script>
+</html>

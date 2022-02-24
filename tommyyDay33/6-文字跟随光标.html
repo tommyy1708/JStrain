@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var span = document.createElement("span");
+span.innerText = '我是跟随光标的文字';
+span.style.position = 'absolute';
+
+window.onmousemove=function(e){
+    document.body.appendChild(span);
+    var ev = window.event || e;
+    var x = ev.clientX + 15;
+    var y = ev.clientY + 15;
+    // 获取到坐标是一个数字，一定要记得加单位
+    span.style.left = x + 'px';
+    span.style.top = y + 'px';
+}
+</script>
+</html>

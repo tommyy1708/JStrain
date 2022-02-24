@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+姓名：<input type="text" class="name"><br>
+年龄：<input type="text" class="age"><br>
+性别：<input type="text" class="sex"><br>
+<button class="yes">确定</button><br>
+<table border=1>
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</body>
+<script type="text/javascript">
+// 获取元素内容一定要在事件中，否则还没开始点击就已经获取到一个空字符串
+document.querySelector(".yes").onclick=function(){
+    var name = document.querySelector(".name").value;
+    var age = document.querySelector(".age").value;
+    var sex = document.querySelector(".sex").value;
+    if(name == ''){
+        alert("请输入姓名！！！");
+        return false; // 通常使用return  false  来阻止函数继续运行
+    }
+    if(age == ''){
+        alert("请输入年龄！！！");
+        return false; // 通常使用return  false  来阻止函数继续运行
+    }
+    if(sex == ''){
+        alert("请输入性别！！！");
+        return false; // 通常使用return  false  来阻止函数继续运行
+    }
+    // console.log(name);
+    var tr = document.createElement("tr");
+    var nameTd = document.createElement("td");
+    nameTd.innerText = name;
+    tr.appendChild(nameTd);
+    var ageTd = document.createElement("td");
+    ageTd.innerText = age;
+    tr.appendChild(ageTd);
+    var sexTd = document.createElement("td");
+    sexTd.innerText = sex;
+    tr.appendChild(sexTd);
+    document.querySelector("tbody").appendChild(tr);
+    document.querySelector(".name").value = '';
+    document.querySelector(".age").value = '';
+    document.querySelector(".sex").value = '';
+}
+// 获取表单元素的值，都是用value来获取   input select textarea
+// 普通标签  双标签  innerText  innerHTML   
+</script>
+</html>
